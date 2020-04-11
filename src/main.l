@@ -8,9 +8,8 @@ n1 \n
 
 %%
 
-{STRING}+([-_.]*{STRING}+)*[@]{STRING}+([-_.]*{STRING}+)*/.? { printf("%s\n", yytext); }
+{STRING}+([-_.]*{STRING}+)*[@]{STRING}+([-_.]*{STRING}+)*{STRING}? { printf("%s\n", yytext); }
 
-[n1]+ ;
 [[:space:]]+ ;
 [[:^space:]]+ ;
 
